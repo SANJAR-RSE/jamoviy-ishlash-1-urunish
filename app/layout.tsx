@@ -38,19 +38,36 @@ export default function RootLayout({
             Daily & <span className="text-[#FFD700]">Cup</span>
           </Link>
           <nav className="flex gap-8">
-            {["menu", "contact", "about us"].map((item) => (
-              <Link
-                key={item}
-                href=""
-                className="relative text-white/50 font-medium text-xs uppercase tracking-widest
-                     transition-colors duration-250 hover:text-[#FFD700]
-                     after:absolute after:bottom-[-4px] after:left-0 after:h-[1.5px]
-                     after:w-0 after:bg-[#FFD700] after:transition-all after:duration-250
-                     hover:after:w-full"
-              >
-                {item}
-              </Link>
-            ))}
+            <Link
+              href="/menu"
+              className="relative text-white/50 font-medium text-xs uppercase tracking-widest
+         transition-colors duration-250 hover:text-[#FFD700]
+         after:absolute after:bottom-[-4px] after:left-0 after:h-[1.5px]
+         after:w-0 after:bg-[#FFD700] after:transition-all after:duration-250
+         hover:after:w-full"
+            >
+              menu
+            </Link>
+            <Link
+              href="/contact"
+              className="relative text-white/50 font-medium text-xs uppercase tracking-widest
+         transition-colors duration-250 hover:text-[#FFD700]
+         after:absolute after:bottom-[-4px] after:left-0 after:h-[1.5px]
+         after:w-0 after:bg-[#FFD700] after:transition-all after:duration-250
+         hover:after:w-full"
+            >
+              contact
+            </Link>
+            <Link
+              href="/about"
+              className="relative text-white/50 font-medium text-xs uppercase tracking-widest
+         transition-colors duration-250 hover:text-[#FFD700]
+         after:absolute after:bottom-[-4px] after:left-0 after:h-[1.5px]
+         after:w-0 after:bg-[#FFD700] after:transition-all after:duration-250
+         hover:after:w-full"
+            >
+              about us
+            </Link>
           </nav>
         </header>
 
