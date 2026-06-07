@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,10 +28,49 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
-        <header></header>
-        <main>{children}</main>
-        <footer></footer>
+      <body className="min-h-full flex flex-col bg-[#0a0a0a]">
+        {/* HEADER */}
+        <header className="px-10 py-7 border-b border-[#FFD700]/15 flex justify-between items-center bg-white/[0.02]">
+          <Link
+            href="/"
+            className="font-serif font-black text-white text-2xl tracking-tight"
+          >
+            Daily & <span className="text-[#FFD700]">Cup</span>
+          </Link>
+          <nav className="flex gap-8">
+            {["menu", "contact", "about us"].map((item) => (
+              <Link
+                key={item}
+                href=""
+                className="relative text-white/50 font-medium text-xs uppercase tracking-widest
+                     transition-colors duration-250 hover:text-[#FFD700]
+                     after:absolute after:bottom-[-4px] after:left-0 after:h-[1.5px]
+                     after:w-0 after:bg-[#FFD700] after:transition-all after:duration-250
+                     hover:after:w-full"
+              >
+                {item}
+              </Link>
+            ))}
+          </nav>
+        </header>
+
+        {/* MAIN */}
+        <main className="flex-1 bg-[radial-gradient(ellipse_at_60%_40%,rgba(255,215,0,0.04)_0%,transparent_65%)]">
+          {children}
+        </main>
+
+        {/* FOOTER */}
+        <footer className="px-10 py-7 border-t border-white/[0.06] flex justify-between items-center">
+          <Link
+            href="/"
+            className="font-serif font-black text-white/70 text-xl"
+          >
+            Daily & <span className="text-[#FFD700]">Cup</span>
+          </Link>
+          <p className="text-xs text-white/20 tracking-wide">
+            © Daily Cup. Barcha huquqlar himoyalangan.
+          </p>
+        </footer>
       </body>
     </html>
   );
