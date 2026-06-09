@@ -36,9 +36,9 @@ const testimonials = [
 ];
 
 const hours = [
-  { day: "Dushanba – Juma", time: "08:00 – 22:00" },
-  { day: "Shanba", time: "09:00 – 23:00" },
-  { day: "Yakshanba", time: "10:00 – 21:00" },
+  { day: "Dushanba - Juma", time: "08:00 - 22:00" },
+  { day: "Shanba", time: "09:00 - 23:00" },
+  { day: "Yakshanba", time: "10:00 - 21:00" },
 ];
 
 const marqueeWords = [
